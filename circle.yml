@@ -1,3 +1,4 @@
+# CircleCI 1.0の旧設定。現行サービスでの再開には設定形式の移行が必要。
 machine:
   environment:
     USER_NAME: builtinnya
@@ -5,7 +6,7 @@ machine:
   python:
     version: 2.7.12
   ruby:
-    version: 2.3.3
+    version: 2.7.8
   timezone: Asia/Tokyo
 
 dependencies:
@@ -21,7 +22,7 @@ test:
     - ./animedb test
   post:
     - cd docs && bundle exec jekyll build
-    # - cd docs && bundle exec htmlproofer ./_site --only-4xx --allow-hash-href
+    # - cd docs && bundle exec htmlproofer ./_site --only-4xx --allow-hash-href=true
 
 deployment:
   production:

@@ -81,3 +81,17 @@
 
 本ソフトウェア（ソースコードおよびデータベース）の利用は[MIT ライセンス](https://github.com/anilogia/animedb/blob/master/LICENSE)に基づく。
 また、[メディア芸術データベース利用規約](https://mediaarts-db.jp/user_terms.html)に準ずること。
+
+
+## ドキュメントのNode.jsセキュリティ更新
+
+ドキュメントのビルド・配信環境はNode.js 26.13.1を使用します。
+docs/Dockerfileは対応OS上でRuby 2.7.8と既存Jekyllの互換性を維持します。
+ローカルのRuby版はdocs/.ruby-versionを参照してください。
+セットアップはコミット済みGemfile.lockの依存を導入します。
+
+Ruby 2.7と旧Jekyllは保守終了済みの依存を含むため、別途移行が必要です。
+今回の変更でRubyやPython側の安全性を保証するものではありません。
+circle.ymlとdocs/circle.ymlは終了済みCircleCI 1.0の旧設定です。
+Ruby指定とHTML検査コマンドの整合のみ更新しており、CI再開には設定形式の
+移行が必要です。Dockerのビルドとローカル配信を確認用の手順とします。

@@ -7,9 +7,8 @@
 set -e
 
 # Set up Ruby dependencies via Bundler.
-gem install bundler --conservative
-bundle check || bundle install
-bundle update
+gem install bundler -v 2.4.22 --no-document
+bundle _2.4.22_ check || bundle _2.4.22_ install
 
 # Set up JS/CSS dependencies via NPM.
 npm install
