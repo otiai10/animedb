@@ -1,9 +1,12 @@
 source 'https://rubygems.org'
 
+ruby '2.7.8'
+
 gem 'autoprefixer-rails'
 gem 'html-proofer'
-gem 'jekyll'
-gem 'jekyll-assets'
+gem 'jekyll', '~> 3.10'
+gem 'kramdown-parser-gfm'
+gem 'jekyll-assets', '2.2.8'
 gem 'jekyll-sitemap'
 gem 'mini_magick'
 gem 'sass'
